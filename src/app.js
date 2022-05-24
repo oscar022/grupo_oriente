@@ -13,20 +13,7 @@ const passport = require('passport');
 const app = express(); //creo el modulo app
 require('./config/passport');
 
-//mensajeria
-const http=require('http')
-const server=http.createServer(app)
 
-const socketio=require('socket.io');
-const io = socketio.listener = (server);
-
-//const {Server}=require('socket.io');
-//const io = new Server(server);
-
-
-io.on('connection',(socket)=>{
-  console.log('un usuario se ha conectado')
-})
 
 //settings
 app.set('port',process.env.PORT || 3000)

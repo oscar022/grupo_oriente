@@ -1,6 +1,7 @@
 require ('dotenv').config();
 const app = require( "./app" ); //mando a llamar el modulo app
 require ('./database');
+require('./mensajeria/mensajeria')
 
 //appdata.listen(3000)
 /*app.listen(3000)
