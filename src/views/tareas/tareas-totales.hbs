@@ -1,0 +1,26 @@
+<h1>actividades</h1>
+
+ <u1> 
+    <li><a href="/tareas/add">nueva tarea</a></li>
+</u1>
+
+<div class="row">
+    {{#each Ltarea}}
+    <div class="cold-md3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                {{titulo}} <a href="/tareas/edit/{{_id}}"><i> edit</i></a>
+                </h4>
+                <p>{{descripcion}}</p>
+                <form action="/tareas/delete/{{_id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn-danger btn-block btn-sm">
+                    borrar
+                </button>
+                </form>
+            </div>
+    </div>
+    </div>
+    {{/each}}
+</div>

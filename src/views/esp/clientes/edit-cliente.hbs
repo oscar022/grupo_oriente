@@ -1,0 +1,27 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+          <h3>editar</h3>
+      </div>
+      <div class="card-body">
+          <form action="/clientes/edit/{{Ecliente.id}}?_method=put" method="post">
+          <input type="hidden" name="_method" value="put"
+          <div class="form-grup">
+              <input type="text" name="nombre" class="form-control" placeholder="nombre" value="{{Ecliente.nombre}}">
+          </div>          
+          <div class="form-grup">
+              <textarea name="direccion" class="form-control" placeholder="direccion">{{Ecliente.direccion}}</textarea>
+          </div>
+          <div class="form-grup">
+              <textarea name="tarea" class="form-control" placeholder="tarea">{{Ecliente.tarea}}</textarea>
+          </div>
+          <div class="form-grup">
+              <textarea name="producto" class="form-control" placeholder="producto">{{Ecliente.producto}}</textarea>
+          </div>
+          <div class="form-grup">
+              <button class="btn btn-primary btn-block" type="submit"> guardar </button>
+          </div>      
+      </div>
+          </form>
+    </div>
+</div>

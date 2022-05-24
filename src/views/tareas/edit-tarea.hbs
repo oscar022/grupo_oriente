@@ -1,0 +1,21 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+          <h3>editar</h3>
+      </div>
+      <div class="card-body">
+          <form action="/tareas/edit/{{Etarea.id}}?_method=put" method="post">
+          <input type="hidden" name="_method" value="put"
+          <div class="form-grup">
+              <input type="text" name="titulo" class="form-control" value="{{Etarea.titulo}}">
+          </div>          
+          <div class="form-grup">
+              <textarea name="descripcion" class="form-control">{{Etarea.descripcion}}</textarea>
+          </div>
+          <div class="form-grup">
+              <button class="btn btn-primary btn-block" type="submit"> guardar </button>
+          </div>      
+      </div>
+          </form>
+    </div>
+</div>
